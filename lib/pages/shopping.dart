@@ -129,22 +129,22 @@ class _ShoppingState extends State<Shopping> {
       return circularProgress();
     } else if (posts.isEmpty) {
       return Container(
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Icon(
               Icons.error_outline,
-              size: 250,
+              size: 100,
               color: Colors.black,
             ),
             Padding(
               padding: EdgeInsets.only(top: 20.0),
               child: Text(
-                "No Posts!!!!!",
+                " No Posts!!!!!",
                 style: TextStyle(
                   fontFamily: "Bangers",
                   color: Colors.black,
-                  fontSize: 60.0,
+                  fontSize: 35.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -199,7 +199,7 @@ class _ShoppingState extends State<Shopping> {
                 );
               }));
         else
-          return const Text('Some error happened');
+          return circularProgress();
       },
     );
   }

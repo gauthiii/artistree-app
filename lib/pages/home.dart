@@ -306,6 +306,7 @@ class _HomeState extends State<Home> {
   onPageChanged(int pageIndex) {
     setState(() {
       this.pageIndex = pageIndex;
+      isCat = false;
     });
   }
 
@@ -819,6 +820,7 @@ class _HomeState extends State<Home> {
                         final FacebookAccessToken fbToken = result.accessToken;
 
                         //Convert to Auth Credential
+                        // ignore: unused_local_variable
                         final AuthCredential credential =
                             FacebookAuthProvider.getCredential(
                                 accessToken: fbToken.token);
@@ -1692,6 +1694,7 @@ class _HomeState extends State<Home> {
   }
 }
 
+// ignore: missing_return
 Color _getColorFromHex(String hexColor) {
   hexColor = hexColor.replaceAll("#", "");
   if (hexColor.length == 6) {
